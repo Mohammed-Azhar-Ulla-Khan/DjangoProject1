@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%extends 'myApp/parent.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        {%block for_child%}
+        <h1 style="color: blue;">Student Creation Form</h1>
+        <form action="" method="post">
+            {{form.as_p}}
+            {%csrf_token%}
+            <input type="submit" class="btn btn-primary" value="Insert/Update/Record">
+        </form>
+        {%endblock%}
+    </center>
+</body>
+</html>
